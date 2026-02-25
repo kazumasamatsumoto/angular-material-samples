@@ -1,0 +1,104 @@
+<div class="slider-verification">
+  <section class="verification-section">
+    <h2>1. 基本スライダー</h2>
+    <p class="description">標準のmat-sliderコンポーネント</p>
+    <mat-slider>
+      <input matSliderThumb [(ngModel)]="basicValue" min="0" max="100" />
+    </mat-slider>
+    <p class="value-display">現在の値: {{ basicValue }}</p>
+  </section>
+
+  <section class="verification-section">
+    <h2>2. 範囲スライダー</h2>
+    <p class="description">開始値と終了値を選択できるレンジスライダー</p>
+    <mat-slider>
+      <input matSliderStartThumb [(ngModel)]="rangeStart" min="0" max="100" />
+      <input matSliderEndThumb [(ngModel)]="rangeEnd" min="0" max="100" />
+    </mat-slider>
+    <p class="value-display">範囲: {{ rangeStart }} - {{ rangeEnd }}</p>
+  </section>
+
+  <section class="verification-section color-section">
+    <h2>3. 色の変更検証（M2 theme用 color プロパティ）</h2>
+    <p class="description">
+      Angular Material 20のM3テーマではcolorプロパティは無効です。<br />
+      以下のスライダーはM2互換スタイルがある場合に色が変わります。
+    </p>
+
+    <div class="color-slider">
+      <h3>Primary (primary)</h3>
+      <mat-slider color="primary">
+        <input matSliderThumb [(ngModel)]="primaryValue" min="0" max="100" />
+      </mat-slider>
+      <p class="value-display">値: {{ primaryValue }}</p>
+    </div>
+
+    <div class="color-slider">
+      <h3>Accent (accent)</h3>
+      <mat-slider color="accent">
+        <input matSliderThumb [(ngModel)]="accentValue" min="0" max="100" />
+      </mat-slider>
+      <p class="value-display">値: {{ accentValue }}</p>
+    </div>
+
+    <div class="color-slider">
+      <h3>Warn (warn)</h3>
+      <mat-slider color="warn">
+        <input matSliderThumb [(ngModel)]="warnValue" min="0" max="100" />
+      </mat-slider>
+      <p class="value-display">値: {{ warnValue }}</p>
+    </div>
+  </section>
+
+  <section class="verification-section">
+    <h2>4. ラベル表示スライダー</h2>
+    <p class="description">親指を押すと値を表示（discrete）</p>
+    <mat-slider [discrete]="true" [displayWith]="formatLabel">
+      <input matSliderThumb [(ngModel)]="labeledValue" min="0" max="100" />
+    </mat-slider>
+    <p class="value-display">値: {{ formatLabel(labeledValue) }}</p>
+  </section>
+
+  <section class="verification-section">
+    <h2>5. ティックマーク付きスライダー</h2>
+    <p class="description">stepに応じた目盛り表示</p>
+    <mat-slider [discrete]="true" [showTickMarks]="true">
+      <input matSliderThumb [(ngModel)]="steppedValue" min="0" max="100" step="10" />
+    </mat-slider>
+    <p class="value-display">値: {{ steppedValue }}</p>
+  </section>
+
+  <section class="verification-section custom-css-section">
+    <h2>6. カスタムCSSによる色オーバーライド（M3用）</h2>
+    <p class="description">
+      M3テーマではデザイントークンやCSS変数で色をカスタマイズできます。<br />
+      以下のスライダーはCSSで色を上書きしています。
+    </p>
+    <div class="custom-slider red-slider">
+      <mat-slider>
+        <input matSliderThumb [(ngModel)]="customRedValue" min="0" max="100" />
+      </mat-slider>
+      <span class="label">赤色オーバーライド (値: {{ customRedValue }})</span>
+    </div>
+    <div class="custom-slider green-slider">
+      <mat-slider>
+        <input matSliderThumb [(ngModel)]="customGreenValue" min="0" max="100" />
+      </mat-slider>
+      <span class="label">緑色オーバーライド (値: {{ customGreenValue }})</span>
+    </div>
+  </section>
+
+  <section class="verification-section full-custom-section">
+    <h2>7. 完全カスタマイズ（各部品ごとに色指定）</h2>
+    <p class="description">
+      左トラック・丸（ノブ）・右トラックを個別に色指定できます。<br />
+      例: 左=黄、丸=白+青枠、右=赤
+    </p>
+    <div class="custom-slider full-custom-slider">
+      <mat-slider>
+        <input matSliderThumb [(ngModel)]="fullCustomValue" min="0" max="100" />
+      </mat-slider>
+      <span class="label">値: {{ fullCustomValue }}</span>
+    </div>
+  </section>
+</div>

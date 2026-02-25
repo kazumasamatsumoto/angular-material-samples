@@ -1,0 +1,103 @@
+.slider-verification {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.verification-section {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1a1a2e;
+  }
+
+  .description {
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .value-display {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+}
+
+.color-section {
+  .color-slider {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #444;
+    }
+  }
+}
+
+.custom-css-section {
+  .custom-slider {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background: #f9f9f9;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .label {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  }
+}
+
+// M3用: カスタムCSSによるスライダー色オーバーライド
+// Angular Material のデザイントークン（--mat-slider-*）を上書き
+.red-slider mat-slider {
+  --mat-slider-handle-color: #d32f2f;
+  --mat-slider-active-track-color: #d32f2f;
+  --mat-slider-inactive-track-color: #ffcdd2;
+  --mat-slider-hover-handle-color: #b71c1c;
+  --mat-slider-focus-handle-color: #d32f2f;
+  --mat-slider-ripple-color: #d32f2f;
+}
+
+.green-slider mat-slider {
+  --mat-slider-handle-color: #388e3c;
+  --mat-slider-active-track-color: #388e3c;
+  --mat-slider-inactive-track-color: #c8e6c9;
+  --mat-slider-hover-handle-color: #2e7d32;
+  --mat-slider-focus-handle-color: #388e3c;
+  --mat-slider-ripple-color: #388e3c;
+}
+
+// 完全カスタマイズ: 左=黄、丸=白+青枠、右=赤
+// ノブの青枠は .mdc-slider__thumb-knob に box-shadow で指定
+.full-custom-slider mat-slider {
+  --mat-slider-active-track-color: #ffeb3b;      // 左: 黄色
+  --mat-slider-inactive-track-color: #f44336;   // 右: 赤色
+  --mat-slider-handle-color: #ffffff;           // 丸: 白色
+  --mat-slider-hover-handle-color: #ffffff;
+  --mat-slider-focus-handle-color: #ffffff;
+  --mat-slider-ripple-color: #2196f3;
+  --mat-slider-handle-elevation: none;          // デフォルトの影を消す
+}
+
+// ノブの外枠は styles.scss のグローバルスタイルで指定

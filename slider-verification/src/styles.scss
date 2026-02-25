@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// M3 テーマの設定（Angular Material 20）
+$slider-verification-primary: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  typography: (
+    brand-family: 'Roboto, sans-serif',
+    plain-family: 'Roboto, sans-serif',
+  ),
+  density: (
+    scale: 0,
+  ),
+));
+
+html {
+  @include mat.all-component-themes($slider-verification-primary);
+  // color="accent" / color="warn" を有効にするためのM2互換スタイル
+  @include mat.color-variants-backwards-compatibility($slider-verification-primary);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+// 完全カスタマイズ用: ノブの外枠（子コンポーネント内のためグローバルで指定）
+.full-custom-slider .mdc-slider__thumb .mdc-slider__thumb-knob {
+  box-shadow: 0 0 0 3px #2196f3 !important;
+}
