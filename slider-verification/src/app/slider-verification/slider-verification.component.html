@@ -101,4 +101,29 @@
       <span class="label">値: {{ fullCustomValue }}</span>
     </div>
   </section>
+
+  <section class="verification-section thumb-size-section">
+    <h2>8. サム（ノブ）の大きさ変更</h2>
+    <p class="description">
+      CSS変数 <code>--mat-slider-handle-width</code> と <code>--mat-slider-handle-height</code> でサムのサイズを変更できます。
+    </p>
+    <div class="thumb-size-slider small-thumb">
+      <mat-slider>
+        <input matSliderThumb [(ngModel)]="thumbSizeSmallValue" min="0" max="100" />
+      </mat-slider>
+      <span class="label">小 (12px)</span>
+    </div>
+    <div class="thumb-size-slider">
+      <mat-slider>
+        <input matSliderThumb [(ngModel)]="thumbSizeDefaultValue" min="0" max="100" />
+      </mat-slider>
+      <span class="label">標準 (20px)</span>
+    </div>
+    <div class="thumb-size-slider large-thumb">
+      <mat-slider>
+        <input matSliderThumb [(ngModel)]="thumbSizeLargeValue" min="0" max="100" />
+      </mat-slider>
+      <span class="label">大 (28px)</span>
+    </div>
+  </section>
 </div>

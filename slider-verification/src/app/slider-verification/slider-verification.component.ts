@@ -35,6 +35,11 @@ export class SliderVerificationComponent {
   /** 完全カスタマイズ用スライダー */
   fullCustomValue = 50;
 
+  /** サムサイズ変更用スライダー */
+  thumbSizeSmallValue = 50;
+  thumbSizeDefaultValue = 50;
+  thumbSizeLargeValue = 50;
+
   formatLabel(value: number): string {
     return `${value}%`;
   }

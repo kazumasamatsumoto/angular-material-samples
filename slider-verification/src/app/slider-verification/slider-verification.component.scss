@@ -101,3 +101,34 @@
 }
 
 // ノブの外枠は styles.scss のグローバルスタイルで指定
+
+// サム（ノブ）の大きさ変更
+.thumb-size-section {
+  .thumb-size-slider {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background: #f9f9f9;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .label {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  }
+}
+
+.small-thumb mat-slider {
+  --mat-slider-handle-width: 12px;
+  --mat-slider-handle-height: 12px;
+}
+
+.large-thumb mat-slider {
+  --mat-slider-handle-width: 28px;
+  --mat-slider-handle-height: 28px;
+}

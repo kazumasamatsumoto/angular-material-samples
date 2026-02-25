@@ -39,6 +39,9 @@ M3 テーマではデザイントークンや CSS 変数で色をカスタマイ
 ### 7. 完全カスタマイズ
 左トラック・丸（ノブ）・右トラックを個別に色指定。ノブの外枠は `.mdc-slider__thumb-knob` で指定。
 
+### 8. サム（ノブ）の大きさ変更
+`--mat-slider-handle-width` と `--mat-slider-handle-height` でサムのサイズを変更。
+
 ## 技術情報
 
 - **Angular Material**: 20.2.14
@@ -59,6 +62,8 @@ M3 テーマではデザイントークンや CSS 変数で色をカスタマイ
 | `--mat-slider-hover-handle-color` | ホバー時のノブ色 |
 | `--mat-slider-focus-handle-color` | フォーカス時のノブ色 |
 | `--mat-slider-ripple-color` | リップル効果の色 |
+| `--mat-slider-handle-width` | サムの幅（デフォルト: 20px） |
+| `--mat-slider-handle-height` | サムの高さ（デフォルト: 20px） |
 
 ### ノブの外枠（枠線）
 
