@@ -39,6 +39,7 @@ export class SliderVerificationComponent {
   thumbSizeSmallValue = 50;
   thumbSizeDefaultValue = 50;
   thumbSizeLargeValue = 50;
+  thumbPurpleYellowValue = 50;
 
   formatLabel(value: number): string {
     return `${value}%`;

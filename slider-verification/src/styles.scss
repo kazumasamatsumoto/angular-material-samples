@@ -34,3 +34,8 @@ body {
 .full-custom-slider .mdc-slider__thumb .mdc-slider__thumb-knob {
   box-shadow: 0 0 0 3px #2196f3 !important;
 }
+
+// サム内: 紫、外枠: 黄色
+.purple-yellow-thumb .mdc-slider__thumb .mdc-slider__thumb-knob {
+  box-shadow: 0 0 0 3px #ffeb3b !important;
+}

@@ -132,3 +132,10 @@
   --mat-slider-handle-width: 28px;
   --mat-slider-handle-height: 28px;
 }
+
+// サム内: 紫、外枠: 黄色
+.purple-yellow-thumb mat-slider {
+  --mat-slider-handle-color: #7b1fa2;
+  --mat-slider-hover-handle-color: #7b1fa2;
+  --mat-slider-focus-handle-color: #7b1fa2;
+}
