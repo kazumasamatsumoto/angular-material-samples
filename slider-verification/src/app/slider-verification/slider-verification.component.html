@@ -132,4 +132,17 @@
       <span class="label">サム内: 紫、外枠: 黄色</span>
     </div>
   </section>
+
+  <section class="verification-section">
+    <h2>9. 最小・最大値の表示</h2>
+    <p class="description">スライダーの左に最小値、右に最大値を表示</p>
+    <div class="slider-with-minmax">
+      <span class="minmax-label min-label">{{ minMaxMin }}</span>
+      <mat-slider>
+        <input matSliderThumb [(ngModel)]="minMaxValue" [min]="minMaxMin" [max]="minMaxMax" />
+      </mat-slider>
+      <span class="minmax-label max-label">{{ minMaxMax }}</span>
+    </div>
+    <p class="value-display">現在の値: {{ minMaxValue }}</p>
+  </section>
 </div>

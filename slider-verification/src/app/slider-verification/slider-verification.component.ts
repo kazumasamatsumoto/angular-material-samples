@@ -41,6 +41,11 @@ export class SliderVerificationComponent {
   thumbSizeLargeValue = 50;
   thumbPurpleYellowValue = 50;
 
+  /** 最小・最大表示用 */
+  minMaxMin = 0;
+  minMaxMax = 100;
+  minMaxValue = 50;
+
   formatLabel(value: number): string {
     return `${value}%`;
   }
