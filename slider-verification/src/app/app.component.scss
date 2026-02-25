@@ -26,3 +26,17 @@
   max-width: 800px;
   margin: 0 auto;
 }
+
+.section-divider {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1a1a2e;
+  }
+}

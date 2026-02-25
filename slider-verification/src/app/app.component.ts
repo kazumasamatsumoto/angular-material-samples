@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { SliderVerificationComponent } from './slider-verification/slider-verification.component';
+import { RadioVerificationComponent } from './radio-verification/radio-verification.component';
 
 @Component({
   selector: 'app-root',
-  imports: [SliderVerificationComponent],
+  imports: [SliderVerificationComponent, RadioVerificationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

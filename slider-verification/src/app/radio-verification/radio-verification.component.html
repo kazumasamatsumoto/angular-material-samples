@@ -1,0 +1,96 @@
+<div class="radio-verification">
+  <section class="verification-section">
+    <h2>1. 基本ラジオボタン</h2>
+    <p class="description">mat-radio-group と mat-radio-button の基本的な使い方</p>
+    <mat-radio-group [(ngModel)]="basicFavorite" name="favorite">
+      <mat-radio-button value="apple">りんご</mat-radio-button>
+      <mat-radio-button value="orange">みかん</mat-radio-button>
+      <mat-radio-button value="grape">ぶどう</mat-radio-button>
+    </mat-radio-group>
+    <p class="value-display">選択中: {{ basicFavorite }}</p>
+  </section>
+
+  <section class="verification-section color-section">
+    <h2>2. 色の変更（color プロパティ）</h2>
+    <p class="description">
+      M3テーマでは color プロパティは無効な場合があります。<br />
+      color-variants-backwards-compatibility で accent / warn が有効になります。
+    </p>
+    <div class="color-radio">
+      <h3>Primary</h3>
+      <mat-radio-group [(ngModel)]="colorPrimary" name="colorPrimary">
+        <mat-radio-button color="primary" value="option1">Option 1</mat-radio-button>
+        <mat-radio-button color="primary" value="option2">Option 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="color-radio">
+      <h3>Accent</h3>
+      <mat-radio-group [(ngModel)]="colorAccent" name="colorAccent">
+        <mat-radio-button color="accent" value="option1">Option 1</mat-radio-button>
+        <mat-radio-button color="accent" value="option2">Option 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="color-radio">
+      <h3>Warn</h3>
+      <mat-radio-group [(ngModel)]="colorWarn" name="colorWarn">
+        <mat-radio-button color="warn" value="option1">Option 1</mat-radio-button>
+        <mat-radio-button color="warn" value="option2">Option 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </section>
+
+  <section class="verification-section">
+    <h2>3. ラベル位置（labelPosition）</h2>
+    <p class="description">ラベルをラジオの前か後ろに配置</p>
+    <div class="label-position">
+      <h3>ラベルが後（デフォルト）</h3>
+      <mat-radio-group [(ngModel)]="labelAfter" name="labelAfter">
+        <mat-radio-button value="yes">はい</mat-radio-button>
+        <mat-radio-button value="no">いいえ</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="label-position">
+      <h3>ラベルが前（before）</h3>
+      <mat-radio-group [(ngModel)]="labelBefore" name="labelBefore" labelPosition="before">
+        <mat-radio-button value="yes">はい</mat-radio-button>
+        <mat-radio-button value="no">いいえ</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </section>
+
+  <section class="verification-section">
+    <h2>4. 無効化（disabled）</h2>
+    <p class="description">ラジオグループまたは個別のボタンを無効化</p>
+    <mat-radio-group [(ngModel)]="disabledSelected" name="disabled">
+      <mat-radio-button value="a">選択可能 A</mat-radio-button>
+      <mat-radio-button value="b" disabled>無効 B</mat-radio-button>
+      <mat-radio-button value="c">選択可能 C</mat-radio-button>
+    </mat-radio-group>
+  </section>
+
+  <section class="verification-section custom-section">
+    <h2>5. カスタム色（CSS変数）</h2>
+    <p class="description">M3用のデザイントークンで色をオーバーライド</p>
+    <div class="custom-radio purple-radio">
+      <mat-radio-group [(ngModel)]="customSelected" name="custom">
+        <mat-radio-button value="x">紫のラジオ X</mat-radio-button>
+        <mat-radio-button value="y">紫のラジオ Y</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </section>
+
+  <section class="verification-section custom-section">
+    <h2>6. 選択状態の色反転（白と青）</h2>
+    <p class="description">
+      通常: 青い丸（内側）＋青い枠（外側）<br />
+      反転: 白い丸（内側）＋青い枠（外側）
+    </p>
+    <div class="custom-radio inverted-radio">
+      <mat-radio-group [(ngModel)]="invertedSelected" name="inverted">
+        <mat-radio-button value="a">オプション A</mat-radio-button>
+        <mat-radio-button value="b">オプション B</mat-radio-button>
+        <mat-radio-button value="c">オプション C</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </section>
+</div>

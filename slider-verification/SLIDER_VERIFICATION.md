@@ -1,6 +1,6 @@
-# Angular Material 20.2.14 スライダー色変更検証
+# Angular Material 20.2.14 コンポーネント検証
 
-このアプリケーションは Angular Material 20.2.14 のスライダーコンポーネントにおける**色の変更**検証を行うための環境です。
+このアプリケーションは Angular Material 20.2.14 の **Slider** および **Radio** コンポーネントを検証するための環境です。
 
 ## 起動方法
 
@@ -91,7 +91,16 @@ M3 テーマではデザイントークンや CSS 変数で色をカスタマイ
 }
 ```
 
+## ラジオボタン検証
+
+- 基本ラジオボタン（mat-radio-group / mat-radio-button）
+- 色の変更（primary / accent / warn）
+- ラベル位置（before / after）
+- 無効化（disabled）
+- カスタム色（CSS変数 --mat-radio-selected-icon-color 等）
+
 ## 参考リンク
 
 - [Slider - Angular Material](https://material.angular.dev/components/slider)
 - [Slider Styling (M3)](https://material.angular.dev/components/slider/styling)
+- [Radio - Angular Material](https://material.angular.dev/components/radio)

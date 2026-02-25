@@ -1,0 +1,93 @@
+.radio-verification {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.verification-section {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1a1a2e;
+  }
+
+  .description {
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .value-display {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+}
+
+.color-section {
+  .color-radio {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #444;
+    }
+  }
+}
+
+.label-position {
+  margin-bottom: 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+  }
+}
+
+.custom-section {
+  .custom-radio {
+    padding: 1rem;
+    border-radius: 4px;
+    background: #f9f9f9;
+  }
+}
+
+// カスタム色: 紫（--mat-radio-* トークンで上書き）
+.purple-radio ::ng-deep .mat-mdc-radio-button {
+  --mat-radio-selected-icon-color: #7b1fa2;
+  --mat-radio-selected-hover-icon-color: #7b1fa2;
+  --mat-radio-selected-focus-icon-color: #7b1fa2;
+  --mat-radio-selected-pressed-icon-color: #7b1fa2;
+  --mat-radio-checked-ripple-color: #7b1fa2;
+}
+
+// 色反転: 外枠=青、ドーナッツ部分=青、中心=白（選択時）
+// 外側の円に背景色を指定し、白い中心と青い枠の間の隙間を塗りつぶす
+.inverted-radio ::ng-deep .mat-mdc-radio-button.mat-mdc-radio-checked {
+  .mdc-radio__outer-circle {
+    border-color: #2196f3 !important;      // 外枠: 青
+    background-color: #2196f3 !important;  // 枠と中心の間（ドーナッツ部分）も青で塗りつぶし
+  }
+  .mdc-radio__inner-circle {
+    background-color: #ffffff !important;  // 中心の丸: 白
+  }
+}
