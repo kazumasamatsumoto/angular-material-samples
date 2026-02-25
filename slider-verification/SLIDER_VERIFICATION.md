@@ -67,11 +67,10 @@ M3 テーマではデザイントークンや CSS 変数で色をカスタマイ
 
 ### ノブの外枠（枠線）
 
-ノブの外枠は CSS 変数では指定できないため、子要素を直接指定します。
+ノブの外枠は CSS 変数では指定できないため、子コンポーネント内の要素に `::ng-deep` でスタイルを適用します。
 
 ```scss
-/* ノブは .mdc-slider__thumb 内にあるため、親を含めたセレクタで指定 */
-.ラッパークラス .mdc-slider__thumb .mdc-slider__thumb-knob {
+.ラッパークラス ::ng-deep .mdc-slider__thumb .mdc-slider__thumb-knob {
   box-shadow: 0 0 0 3px #2196f3 !important;  // 青枠の例
 }
 ```
@@ -87,7 +86,7 @@ M3 テーマではデザイントークンや CSS 変数で色をカスタマイ
   --mat-slider-focus-handle-color: #ffffff;
 }
 
-.full-custom-slider .mdc-slider__thumb .mdc-slider__thumb-knob {
+.full-custom-slider ::ng-deep .mdc-slider__thumb .mdc-slider__thumb-knob {
   box-shadow: 0 0 0 3px #2196f3 !important;     // 丸の外枠: 青色
 }
 ```

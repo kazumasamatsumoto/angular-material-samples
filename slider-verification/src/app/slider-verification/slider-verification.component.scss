@@ -89,7 +89,6 @@
 }
 
 // 完全カスタマイズ: 左=黄、丸=白+青枠、右=赤
-// ノブの青枠は .mdc-slider__thumb-knob に box-shadow で指定
 .full-custom-slider mat-slider {
   --mat-slider-active-track-color: #ffeb3b;      // 左: 黄色
   --mat-slider-inactive-track-color: #f44336;   // 右: 赤色
@@ -100,7 +99,10 @@
   --mat-slider-handle-elevation: none;          // デフォルトの影を消す
 }
 
-// ノブの外枠は styles.scss のグローバルスタイルで指定
+// ノブの外枠（子コンポーネント内のため ::ng-deep でスタイルを適用）
+.full-custom-slider ::ng-deep .mdc-slider__thumb .mdc-slider__thumb-knob {
+  box-shadow: 0 0 0 3px #2196f3 !important;
+}
 
 // サム（ノブ）の大きさ変更
 .thumb-size-section {
@@ -138,4 +140,8 @@
   --mat-slider-handle-color: #7b1fa2;
   --mat-slider-hover-handle-color: #7b1fa2;
   --mat-slider-focus-handle-color: #7b1fa2;
+}
+
+.purple-yellow-thumb ::ng-deep .mdc-slider__thumb .mdc-slider__thumb-knob {
+  box-shadow: 0 0 0 3px #ffeb3b !important;
 }

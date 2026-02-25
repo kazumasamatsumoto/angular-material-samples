@@ -29,13 +29,3 @@ body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
-
-// 完全カスタマイズ用: ノブの外枠（子コンポーネント内のためグローバルで指定）
-.full-custom-slider .mdc-slider__thumb .mdc-slider__thumb-knob {
-  box-shadow: 0 0 0 3px #2196f3 !important;
-}
-
-// サム内: 紫、外枠: 黄色
-.purple-yellow-thumb .mdc-slider__thumb .mdc-slider__thumb-knob {
-  box-shadow: 0 0 0 3px #ffeb3b !important;
-}
