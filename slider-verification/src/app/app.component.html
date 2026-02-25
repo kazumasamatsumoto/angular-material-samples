@@ -1,13 +1,14 @@
-<div class="app-container">
+<div class="app-container" [class.bg-white]="backgroundColor === 'white'" [class.bg-blue]="backgroundColor === 'blue'">
   <header class="app-header">
     <h1>Angular Material 20.2.14 - コンポーネント検証</h1>
     <p class="subtitle">Slider・Radio などのコンポーネントを検証するアプリケーション</p>
+    <nav class="page-nav">
+      <a routerLink="/page1" routerLinkActive="active">ページ1</a>
+      <a routerLink="/page2" routerLinkActive="active">ページ2</a>
+      <a routerLink="/page3" routerLinkActive="active">ページ3</a>
+    </nav>
   </header>
   <main class="app-main">
-    <app-slider-verification />
-    <section class="section-divider" aria-hidden="true">
-      <h2>ラジオボタン</h2>
-    </section>
-    <app-radio-verification />
+    <router-outlet />
   </main>
 </div>

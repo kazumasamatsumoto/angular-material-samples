@@ -2,6 +2,44 @@
   min-height: 100vh;
   padding: 2rem;
   font-family: 'Roboto', sans-serif;
+
+  &.bg-white {
+    background-color: #ffffff;
+  }
+
+  &.bg-blue {
+    background-color: #2196f3;
+    color: #ffffff;
+
+    .app-header h1,
+    .app-header .subtitle,
+    .section-divider h2 {
+      color: inherit;
+    }
+    .app-header .subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .page-nav a {
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.page-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+
+  a {
+    color: #2196f3;
+    text-decoration: none;
+
+    &.active {
+      font-weight: 600;
+    }
+  }
 }
 
 .app-header {
